@@ -3,7 +3,6 @@
 import { toast } from "sonner";
 import { Link2, Pencil, Trash2 } from "lucide-react";
 import { DropdownMenuContentProps } from "@radix-ui/react-dropdown-menu";
-
 import { ConfirmModal } from "@/components/confirm-modal";
 import {
   DropdownMenu,
@@ -14,8 +13,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
-import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
+import { Button } from "./ui/button";
 
 interface ActionsProps {
   children: React.ReactNode;
@@ -80,8 +79,7 @@ export const Actions = ({
           disabled={pending}
           onConfirm={onDelete}
         >
-          <Button
-            variant="ghost"
+          <Button variant="ghost"
             className="p-3 cursor-pointer text-sm w-full justify-start font-normal"
           >
             <Trash2 className="h-4 w-4 mr-2" />
